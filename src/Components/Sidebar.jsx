@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { assets } from '../Assets/assets';
 import "../Styles/Sidebar.css"
-const Sidebar = () => {
+ const Sidebar = () => {
     const [extended, Setextended] = useState(false);
   return (
     <div className="sidebar">
