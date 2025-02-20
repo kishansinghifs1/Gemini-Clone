@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #f0f4f9;
-    padding: 25px 15px;
+    padding: 25px 15px 8px;
 }
 .sidebar img{
     width: 20px;
@@ -14,17 +14,24 @@
  margin-left:10px;
  cursor: pointer;
 }
-.sidebar .new-chat{
-    margin-top : 23px;
+.sidebar .new-chat {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 10px 15px;
+    margin-top: 23px;
     background: #e6eaf1;
-    border-radius : 50px;
+    border-radius: 50px;
     font-size: 14px;
-    color: grey;
-    cursor : pointer;
+    color: rgb(126, 125, 125);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.sidebar .new-chat img {
+    width: 12px;
+}
+.sidebar .new-chat:hover {
+    background: #d0d5e0;
 }
 .sidebar .recent{
     display: flex;
