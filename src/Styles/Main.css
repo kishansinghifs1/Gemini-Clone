@@ -59,7 +59,7 @@
     color: #666; 
 }
 .main-bottom{
-    position: relative; /* Changed to relative to avoid issues with absolute positioning */
+    position: absolute; /* Changed to relative to avoid issues with absolute positioning */
     bottom: 0;
     width: 100%;
     max-width: 900px;
@@ -87,13 +87,68 @@
     border: none;
     outline: none;
     padding: 8px;
-    font-size: 1rem; /* Scalable font size */
-    color: #333; /* Text color for readability */
+    font-size: 1rem; 
+    color: #333; 
 }
 .search-box input::placeholder {
-    color: #999; /* Placeholder color for better visibility */
+    color: #999;
 }
 .bottom-info {
-    color: #666; /* Color for the info text */
-    text-align: center; /* Center the text */
+    color: #666; 
+    text-align: center;
+}
+.result {
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.result img{
+    width: 40px;
+    border-radius: 50%;
+}
+.result-data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+}
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right,#9ed7ff,#ffffff,#9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px 0px;
+    }
+    100% {
+        background-position: 800px 0px;
+    }
+}
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
 }
